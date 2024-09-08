@@ -1,0 +1,497 @@
+@font-face {
+  font-family:logo-font;
+  src:url(src/assets/fonts/porschefont.ttf);
+}
+
+@font-face {
+  font-family:PorscheNext-SemiBold;
+  src:url(src/assets/fonts/PorscheNext-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: PorscheNext-Thin;
+  src:url(src/assets/fonts/PorscheNext-Thin.ttf);
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Width of the scrollbar */
+}
+
+
+
+
+/* -------------------------------DROP DOWN SECTION---------------------------- */
+
+.dropdown {
+  position: fixed;
+  top: 0;
+  right: -100vh;
+  height: 100vh;
+  width: 60vh;
+  background-color: rgba(241, 241, 241, 0.664);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  transition: .55s ease-in-out;
+  
+  
+}
+
+.dropdown ul {
+  position: relative;
+  top: 7%;
+  left: 10%;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 20px;
+  width: 80%;
+  height: auto;
+  list-style-type: none;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: black;
+  font-family: PorscheNext-SemiBold;
+  width: 100%;
+  
+  
+}
+
+
+.dropdown li:hover {
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: rgb(163, 163, 163, 0.664);
+  border-radius: 3px;
+}
+
+.dropdown li {
+  padding: 25px;
+  width: 90%;
+}
+
+#close-button {
+  position: relative;
+  right: 30%;
+  width: 35px;
+  height: auto;
+}
+
+.menu-div label:hover, .menu-div, #close-button:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------HERO SECTION---------------------------- */
+.hero-container{
+  background-image: url('src/assets/images/wallpaper.png');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  scroll-margin: 0;
+  
+} 
+
+.navbar {
+  display: flex;
+  justify-content:space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+.logo-text {
+  font-family:logo-font;
+  mix-blend-mode: soft-light;
+  cursor: default;
+  display: inline;
+  font-size: 32px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+.menu-div{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.menu-text{
+  font-size: 18px;    
+  font-family: PorscheNext-SemiBold;
+  color: rgb(255, 252, 249);
+}
+
+#menu-button {
+  width: 45px;
+  height: 49px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color:rgb(255, 252, 249);
+}
+
+.porsche-model {
+  width: 110%;
+  transform: scaleX(-1);
+  margin-left: 15%;
+  margin-right: auto;
+  overflow-x: hidden;
+  
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.model-text{
+  display: inline;
+  position: absolute;
+  font-family: logo-font;
+  font-size: 70px;
+  bottom: 60%;
+  left: 2%;
+  z-index: 0;
+  color: rgb(255, 252, 249);
+}
+
+/* -------------------------------NEWS SECTION---------------------------- */
+
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+}
+
+.news-text {
+  width: 50%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-left: 20rem;
+
+}
+
+.news-headline, .news-summary, .read-container {
+  width: 50%;
+  
+}
+
+.news-headline {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-family: PorscheNext-SemiBold;
+  
+}
+
+.news-summary {
+  font-size: 18px;
+  font-family: PorscheNext-Thin;
+  font-weight: normal;
+}
+
+.image-section {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 80%;
+  height: auto;
+  margin-right: 19rem;
+  
+}
+
+
+.read-container {
+  margin-top: 10%;
+}
+
+.read-link {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  text-decoration: None;
+  
+}
+.read-link label {
+  font-size: 18px;
+  font-family: PorscheNext-SemiBold;
+  color: black;
+  cursor: pointer;
+}
+
+.read-link img {
+  width: 10%;
+  height: 10%;
+}
+
+
+
+/* -------------------------------CAR MODELS SECTION---------------------------- */
+.cars-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.car-boxes {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in;
+  overflow-x: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+
+.image-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
+}
+
+.car-boxes:hover {
+  transform: scale(1.05);
+}
+
+.car-links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.car-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 71%;
+  width: 100%;
+  color: rgb(219, 219, 219);
+}
+
+
+.car-button {
+  border: 3px solid rgb(202, 202, 202);
+  padding: 10px;
+  border-radius: 15px;
+  width: 60%;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: PorscheNext-Thin;
+  transition: transform 1s ease-in-out;
+  font-size: 20px;
+}
+
+.cars-container img {
+  filter: brightness(0.8)
+}
+
+.car-button:hover {
+  transform: scale(1.05);
+  border: 3px solid rgb(255, 255, 255);
+
+}
+.car-text {
+  margin-bottom: 1rem;
+  font-size: 55px;
+  font-family: PorscheNext-SemiBold;
+}
+
+.logo{
+  width: 20%;
+  height: auto;
+  filter: invert(100%);
+  margin: 5%;
+}
+
+#taycan-logo img {
+  transform: scale(1.7);
+}
+
+#smaller-logo img {
+  transform: scale(1.7);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .news-text {
+      margin-left: 5rem;
+  }
+
+  .image-section img {
+      margin-right: 15rem;
+      
+  }
+}
+
+
+
+@media (max-width: 920px) {
+ 
+  .model-text {
+      font-size: 60px;
+  }
+
+  
+  }
+
+@media (max-width: 800px) {
+ 
+  .model-text {
+      font-size: 50px;
+  }
+
+  .news-container {
+      height: 700px;
+  }
+
+  .image-section img {
+      width: 275px;
+      height: auto;
+      margin-right: 5rem;
+  }
+
+
+  .cars-container{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6,1fr);
+  }
+
+
+  }
+
+@media (max-width: 660px) {
+ 
+  .model-text {
+      bottom: 70%;
+  }
+
+  .logo-text, .menu-text {
+      font-size: 20px;
+  }
+
+  .news-container{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: unset;
+      margin-bottom: 20px;
+  }
+
+  .news-text {
+      width: 100%;
+  }
+
+  .news-headline, .news-summary{
+      width: 90%;
+  }
+
+  .read-container {
+      margin-top: 15px;
+  }
+
+  .image-section, .image-section img {
+      width: auto;
+      height: auto;
+  }
+
+  .image-section img {
+      margin: 0 auto 20px auto;
+  }
+
+
+
+
+
+
+  }
+
+@media (max-width: 550px) {
+ 
+  .menu-text{
+      display: None;
+  }
+  
+  .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 35px;
+  }
+
+  .model-text {
+      width: 100%;
+      margin: 0 auto;
+  }
+  .porsche-model{
+      margin: 25px auto 0 auto;
+      
+  }
+
+  
+  }
+
+
+
+@media (max-width: 425px) {
+  .image-section{
+      height: 60%;
+  }
+
+  .model-text{
+      font-size: 40px;
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
